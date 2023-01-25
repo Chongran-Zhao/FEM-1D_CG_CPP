@@ -35,7 +35,7 @@ int main()
   {
     for (int aa = 0; aa < nLocBas; aa++)
     {
-      IEN[aa][ee] = ee * pp + aa + 1; 
+      IEN[aa][ee] = ee * pp + aa; 
     } 
   }
 
@@ -50,7 +50,7 @@ int main()
   int ID[nFunc];
   for (int ii = 0; ii < nFunc; ii++)
   {
-    ID[ii] = ii + 1;
+    ID[ii] = ii;
   }
   ID[0] = -1; // assign the ID for the Dirichlet node to be -1
 
@@ -75,7 +75,7 @@ int main()
     }
     for (int aa = 0; aa < nLocBas; aa++)
     {
-      x_ele[aa] = x_coor[IEN[aa][ee]-1];
+      x_ele[aa] = x_coor[IEN[aa][ee]];
     }
 
     for (int qua = 0; qua < nqp; qua++)
@@ -109,20 +109,20 @@ int main()
 
     for (int aa = 0; aa < nLocBas; aa++)
     {
-      int AA = ID[IEN[aa][ee]-1];
-      if(AA > 0) 
+      int AA = ID[IEN[aa][ee]];
+      if(AA >= 0) 
       {
-        F(AA-1) += f_ele[aa];
+        F(AA) += f_ele[aa];
         for (int bb = 0; bb < nLocBas; bb++)
         {
           int BB = IEN[bb][ee];
-          K.coeffRef(AA-1,BB-1) += k_ele[aa][bb];
+          K.coeffRef(AA,BB) += k_ele[aa][bb];
         }
       }
       else
       {
-        K.coeffRef(IEN[aa][ee]-1,IEN[aa][ee]-1) = 1.0;
-        F(IEN[aa][ee]-1) = g0;
+        K.coeffRef(IEN[aa][ee],IEN[aa][ee]) = 1.0;
+        F(IEN[aa][ee]) = g0;
       }
     }
   }
