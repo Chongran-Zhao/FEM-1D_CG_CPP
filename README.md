@@ -2,8 +2,10 @@
 A CPP code developed to solve 1D pure-diffusion problem in FEM using continuous Galerkin method.
 
 # Phsical problem
-$$u_{,xx} + f(x) = 0 \Sigma = (0,L)$$
+$$u_{,xx} + f(x) = 0 \quad \Sigma = (0,L)$$
+
 $$u(0) = u_{exact}(0)$$
+
 $$u_{,x}(L) = u_{exact,x}(L)$$
 
 # Exact solution
