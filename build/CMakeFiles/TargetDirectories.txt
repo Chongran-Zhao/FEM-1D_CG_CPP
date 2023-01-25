@@ -1,3 +1,0 @@
-/Users/chongran/Documents/M3C-Lab/FEM/CG/FEM-1D_CG_CPP/build/CMakeFiles/1D_CG.dir
-/Users/chongran/Documents/M3C-Lab/FEM/CG/FEM-1D_CG_CPP/build/CMakeFiles/edit_cache.dir
-/Users/chongran/Documents/M3C-Lab/FEM/CG/FEM-1D_CG_CPP/build/CMakeFiles/rebuild_cache.dir

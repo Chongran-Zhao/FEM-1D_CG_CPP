@@ -131,6 +131,9 @@ int main()
   SparseLU<SparseMatrix<double> > solver;
   solver.compute(K);
   u = solver.solve(F);
+  cout << "The number of elements = " << nElem << endl;
+  cout << "The degree of Legrange-shape function = " << pp << endl;
+  cout << "Displacement u = " << endl;
   cout << u << endl;
 }
 
