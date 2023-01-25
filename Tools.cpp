@@ -77,13 +77,12 @@ void Gauss(int N, double a, double b, double * qp, double * wq)
   for (int ii = 0; ii < N1; ii++)
   {
     qp[ii] = (a*(1.0-y[ii])+b*(1.0+y[ii])) / 2.0;
-  }
-  for (int ii = 0; ii < N1; ii++)
-  {
     wq[ii] = (b-a) / ((1-y[ii]*y[ii]) * Lp[ii]*Lp[ii]) * (double(N2)/double(N1)) * (double(N2)/double(N1));
+
   }
   return;
 }
+
 
 double PolyBasis(const int &degree, int i, int der, double &x)
 {

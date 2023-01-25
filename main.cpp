@@ -31,7 +31,6 @@ int main()
   const int nFunc = pp * nElem + 1;
 
   int IEN[nLocBas][nElem];
-  IEN_construct(nLocBas, nElem, pp, IEN);
   for (int ee = 0; ee < nElem; ee++)
   {
     for (int aa = 0; aa < nLocBas; aa++)
